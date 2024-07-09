@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drag and Drop</title>
+    <meta charset="utf-8" />
+    <link href="./css/drag.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>DRAG AND DROP</h1>
+
+     <section class="draggable-elements">
+        <div class="draggable" id="red" draggable="true" style="background-color: red;"><img id="red" src="./assets/Orca.PNG" width="70px" height="70px"/></div>
+        <div class="draggable" id="blue" draggable="true" style="background-color: blue">B</div>
+        <div class="draggable" id="green" draggable="true" style="background-color: green">G</div>
+        <div class="draggable" id="black" draggable="true" style="background-color: black">B</div>
+        <div class="draggable" id="orange" draggable="true" style="background-color: orange">O</div>
+      </section>
+      
+      <section class="droppable-elements">
+        <div class="droppable" data-draggable-id="green" data-actual-item=""></div>
+        <div class="droppable" data-draggable-id="black" data-actual-item=""></div>
+        <div class="droppable" data-draggable-id="blue" data-actual-item=""></div>
+        <div class="droppable" data-draggable-id="orange" data-actual-item=""></div>
+        <div class="droppable" data-draggable-id="red" data-actual-item=""></div>
+      </section>
+
+      <button onclick="verifyCards()">Verifier les cartes</button>
+      <div id="correction"></div>
+      <button id="reset-btn" onclick="reset()" style="display: none;">Réessayer</button>
+
+      <dialog id="why-form">
+        <p>Vous avez choisi de mettre une carte</p>
+        <form method="dialog">
+          <button onclick="verifyResponse()">OK</button>
+        </form>
+      </dialog>
+      
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="./js/dragJquery.js"></script>
+  </body>
+</html>
