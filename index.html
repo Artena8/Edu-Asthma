@@ -10,10 +10,10 @@
 
      <section class="draggable-elements">
         <div class="draggable" id="red" draggable="true" style="background-color: red;"><img id="red" src="./assets/Orca.PNG" width="70px" height="70px"/></div>
-        <div class="draggable" id="blue" draggable="true" style="background-color: blue">B</div>
-        <div class="draggable" id="green" draggable="true" style="background-color: green">G</div>
-        <div class="draggable" id="black" draggable="true" style="background-color: black">B</div>
-        <div class="draggable" id="orange" draggable="true" style="background-color: orange">O</div>
+        <div class="draggable" id="blue" draggable="true" style="background-color: blue"><img id="blue" src="./assets/Orca.PNG" width="70px" height="70px"/></div>
+        <div class="draggable" id="green" draggable="true" style="background-color: green"><img id="green" src="./assets/Orca.PNG" width="70px" height="70px"/></div>
+        <div class="draggable" id="black" draggable="true" style="background-color: black"><img id="black" src="./assets/Orca.PNG" width="70px" height="70px"/></div>
+        <div class="draggable" id="orange" draggable="true" style="background-color: orange"><img id="orange" src="./assets/Orca.PNG" width="70px" height="70px"/></div>
       </section>
       
       <section class="droppable-elements">
@@ -29,13 +29,21 @@
       <button id="reset-btn" onclick="reset()" style="display: none;">Réessayer</button>
 
       <dialog id="why-form">
-        <p>Vous avez choisi de mettre une carte</p>
         <form method="dialog">
-          <button onclick="verifyResponse()">OK</button>
+        <h2 id="question-text"></h2>
+          <div id="responses-text">
+            <input id="reponse1" class="styled" type="button" onclick="verifyResponse(1)" />
+            <input id="reponse2" class="styled" type="button" onclick="verifyResponse(2)" />
+            <input id="reponse3" class="styled" type="button" onclick="verifyResponse(3)" />
+            <input id="return" onclick="returnModal()" class="styled" type="button" value="Je ne voulais pas choisir cette réponse" />
+          </div>  
+          <h4 id="explications"></h4>        
         </form>
+        <button id="accept-btn" onclick="closeModal()" style="display: none;">Quitter</button>
       </dialog>
       
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"></script>
       <script src="./js/dragJquery.js"></script>
   </body>
 </html>

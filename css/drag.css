@@ -47,12 +47,7 @@ section {
 
 .droppable {
   outline: 3px dotted var(--gray-10);
-  background-color: var(--gray-3);
-}
-
-.droppable.droppable-hover {
-  outline-width: 4px;
-  background-color: var(--gray-6);
+  background-color: white;
 }
 
 .droppable.dropped {
@@ -71,4 +66,9 @@ section {
 
 .mauvais {
   color: red;
+}
+
+#responses-text {
+  display: flex;
+  flex-direction: column;
 }

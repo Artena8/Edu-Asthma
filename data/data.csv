@@ -1,0 +1,6 @@
+situation,item,reponse1,reponse2,reponse3,numeroreponse,pourquoireponse1,pourquoireponse2,pourquoireponse3
+exo1,green,Ceci est une phrase A,Ceci est une phrase B,Ceci est une phrase C,2,NON,OUI,NON
+exo1,blue,Ceci est une phrase A,Ceci est une phrase B,Ceci est une phrase C,1,OUI,NON,NON
+exo1,red,Ceci est une phrase A,Ceci est une phrase B,Ceci est une phrase C,3,NON,NON,OUI
+exo1,orange,Ceci est une phrase A,Ceci est une phrase B,Ceci est une phrase C,1,OUI,NON,NON
+exo1,black,Ceci est une phrase A,Ceci est une phrase B,Ceci est une phrase C,2,NON,OUI,NON
