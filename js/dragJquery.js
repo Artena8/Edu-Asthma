@@ -29,6 +29,7 @@ $(document).ready(function(){
     const $CorrectionMessage = $("#correction");
     let lastDroppableElem;
     let quizz;
+    let tentivates = 0;
 
     $draggableElems.on("dragstart", function(event) {
         event.originalEvent.dataTransfer.setData("text", event.target.id);
@@ -93,6 +94,8 @@ $(document).ready(function(){
             }
         });
         if(ret) {
+            tentivates++;
+            $("#try").html("Tentatives : " + tentivates);
             $CorrectionMessage.html(text);
             $("#reset-btn").css("display","block");
         }

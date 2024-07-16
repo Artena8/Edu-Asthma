@@ -6,8 +6,9 @@
     <link href="./css/drag.css" rel="stylesheet" />
   </head>
   <body>
-    <h1>DRAG AND DROP</h1>
+    <h1>DRAG AND DROP</h1><h2 id="try">Tentatives : 0</h2>
 
+    <main>
      <section class="draggable-elements">
         <div class="draggable" id="red" draggable="true" style="background-color: red;"><img id="red" src="./assets/Orca.PNG" width="70px" height="70px"/></div>
         <div class="draggable" id="blue" draggable="true" style="background-color: blue"><img id="blue" src="./assets/Orca.PNG" width="70px" height="70px"/></div>
@@ -16,6 +17,7 @@
         <div class="draggable" id="orange" draggable="true" style="background-color: orange"><img id="orange" src="./assets/Orca.PNG" width="70px" height="70px"/></div>
       </section>
       
+      <div  class="gamezone">
       <section class="droppable-elements">
         <div class="droppable" data-draggable-id="green" data-actual-item=""></div>
         <div class="droppable" data-draggable-id="black" data-actual-item=""></div>
@@ -27,6 +29,8 @@
       <button onclick="verifyCards()">Verifier les cartes</button>
       <div id="correction"></div>
       <button id="reset-btn" onclick="reset()" style="display: none;">Réessayer</button>
+      </div>
+    </main>
 
       <dialog id="why-form">
         <form method="dialog">
