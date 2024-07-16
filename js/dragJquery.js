@@ -2,7 +2,7 @@ $(document).ready(function(){
     let jsonobject;
 
     $.ajax({
-        url: "../data/data.csv",
+        url: "./data/data.csv",
         async: false,
         success: function (csvd) {
             jsonobject = $.csv.toObjects(csvd);
